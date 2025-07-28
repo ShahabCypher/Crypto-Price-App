@@ -1,8 +1,4 @@
-import { useState } from "react";
-
-const Pagination = () => {
-  const [page, setPage] = useState(1);
-
+const Pagination = ({ page, setPage }) => {
   const previousHandler = () => {
     if (page > 1) setPage((page) => page - 1);
   };
