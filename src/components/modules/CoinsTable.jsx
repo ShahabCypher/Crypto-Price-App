@@ -4,7 +4,7 @@ import CoinsTableRow from "./CoinsTableRow";
 
 import styles from "./styles/CoinsTable.module.css";
 
-const CoinsTable = ({ coins, isLoading }) => {
+const CoinsTable = ({ coins, isLoading, currency }) => {
   return (
     <div className={styles.container}>
       {isLoading ? (
@@ -23,7 +23,7 @@ const CoinsTable = ({ coins, isLoading }) => {
           </thead>
           <tbody>
             {coins.map((coin) => (
-              <CoinsTableRow key={coin.id} coin={coin} />
+              <CoinsTableRow key={coin.id} coin={coin} currency={currency} />
             ))}
           </tbody>
         </table>

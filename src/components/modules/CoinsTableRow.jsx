@@ -12,6 +12,7 @@ const CoinsTableRow = ({
     current_price,
     price_change_percentage_24h: price_change,
   },
+  currency,
 }) => {
   return (
     <tr>
@@ -22,11 +23,23 @@ const CoinsTableRow = ({
         </div>
       </td>
       <td>{name}</td>
-      <td>${current_price.toLocaleString()}</td>
+      <td>
+        {currency === "usd"
+          ? `$${current_price.toLocaleString()}`
+          : currency === "eur"
+          ? `€${current_price.toLocaleString()}`
+          : `¥${current_price.toLocaleString()}`}
+      </td>
       <td className={price_change > 0 ? styles.up : styles.down}>
         {price_change.toFixed(2)}%
       </td>
-      <td>${total_volume.toLocaleString()}</td>
+      <td>
+        {currency === "usd"
+          ? `$${total_volume.toLocaleString()}`
+          : currency === "eur"
+          ? `€${total_volume.toLocaleString()}`
+          : `¥${total_volume.toLocaleString()}`}
+      </td>
       <td>
         <img src={price_change > 0 ? chartUp : chartDown} alt={name} />
       </td>
