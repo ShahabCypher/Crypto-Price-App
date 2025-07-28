@@ -1,6 +1,6 @@
 # Crypto App
 
-A cryptocurrency tracking application built with React. This application allows users to monitor cryptocurrency prices, view detailed information about different coins, and view different types of charts for the selected cryptocurrency in a simple interface.
+A cryptocurrency tracking application built with React. This application allows users to monitor cryptocurrency prices, view detailed information about different coins, and view different types of charts for the selected cryptocurrency in a simple interface using [coingecko.com](https://www.coingecko.com) API.
 
 ## Features
 
