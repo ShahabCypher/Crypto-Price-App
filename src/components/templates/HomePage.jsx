@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import SearchBox from "../modules/SearchBox";
 import CoinsTable from "../modules/CoinsTable";
 import Pagination from "../modules/Pagination";
-import Chart from "../modules/Chart";
+import ChartModal from "../modules/ChartModal";
 import { getCoinsList } from "../../services/cryptoApi";
 
 const HomePage = () => {
@@ -39,7 +39,7 @@ const HomePage = () => {
         setChart={setChart}
       />
       <Pagination page={page} setPage={setPage} />
-      {!!chart && <Chart chart={chart} setChart={setChart} />}
+      {!!chart && <ChartModal chart={chart} setChart={setChart} />}
     </div>
   );
 };
