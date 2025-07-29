@@ -39,7 +39,9 @@ const HomePage = () => {
         setChart={setChart}
       />
       <Pagination page={page} setPage={setPage} />
-      {!!chart && <ChartModal chart={chart} setChart={setChart} />}
+      {!!chart && (
+        <ChartModal chart={chart} setChart={setChart} currency={currency} />
+      )}
     </div>
   );
 };

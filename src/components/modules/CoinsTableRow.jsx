@@ -4,8 +4,8 @@ import chartDown from "../../assets/chart-down.svg";
 import styles from "./styles/CoinsTableRow.module.css";
 import { marketChart } from "../../services/cryptoApi";
 
-const CoinsTableRow = ({
-  coin: {
+const CoinsTableRow = ({ coin, currency, setChart }) => {
+  const {
     id,
     name,
     image,
@@ -13,17 +13,14 @@ const CoinsTableRow = ({
     total_volume,
     current_price,
     price_change_percentage_24h: price_change,
-  },
-  currency,
-  setChart,
-}) => {
+  } = coin;
   const showHandler = async () => {
     try {
       const res = await fetch(marketChart(id, currency));
       const json = await res.json();
-      setChart(json);
+      setChart({ ...json, coin: coin });
     } catch {
-      setChart(true);
+      setChart(null);
     }
   };
 
