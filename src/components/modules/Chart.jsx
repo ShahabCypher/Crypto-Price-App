@@ -20,6 +20,7 @@ const Chart = ({ chart, type }) => {
           dataKey={type}
           stroke="#3874ff"
           strokeWidth="2px"
+          dot={false}
         />
         <CartesianGrid stroke="#404042" />
         <YAxis dataKey={type} domain={["auto", "auto"]} />
