@@ -13,11 +13,16 @@ const CoinsTableRow = ({
     price_change_percentage_24h: price_change,
   },
   currency,
+  setChart,
 }) => {
+  const showHandler = () => {
+    setChart(true);
+  };
+
   return (
     <tr>
       <td>
-        <div className={styles.symbol}>
+        <div className={styles.symbol} onClick={showHandler}>
           <img src={image} alt={name} />
           <span>{symbol.toUpperCase()}</span>
         </div>
