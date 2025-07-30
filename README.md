@@ -17,3 +17,5 @@ A cryptocurrency tracking application built with React. This application allows 
 ## License
 
 This project is licensed under the MIT License.
+
+Note: This project was built as part of a React course on [BotoStart](https://botostart.ir/)
